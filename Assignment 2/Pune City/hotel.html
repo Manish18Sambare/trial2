@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Website with Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Optional: Custom CSS for additional styling -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .navbar {
+      background-color: #007bff;
+      padding: 1rem;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #dcdcdc;
+    }
+    .hero {
+      background-color: #007bff;
+      color: #fff;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .card-custom {
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card-custom .card-body {
+      background-color: #fff;
+    }
+    .btn-custom {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    .footer {
+      background-color: #007bff;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">My Website</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#form">Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>Welcome to My Website</h1>
+      <p>Your one-stop solution for all your needs. Explore our features and get in touch!</p>
+      <a href="#form" class="btn btn-custom btn-lg">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-custom">
+          <div class="card-body text-center">
+            <i class="fas fa-cogs fa-3x mb-3"></i>
+            <h5 class="card-title">Feature 1</h5>
+            <p class="card-text">Description of the first feature. Explain what it does and why it is valuable.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-custom">
+          <div class="card-body text-center">
+            <i class="fas fa-star fa-3x mb-3"></i>
+            <h5 class="card-title">Feature 2</h5>
+            <p class="card-text">Description of the second feature. Explain what it does and why it is valuable.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-custom">
+          <div class="card-body text-center">
+            <i class="fas fa-users fa-3x mb-3"></i>
+            <h5 class="card-title">Feature 3</h5>
+            <p class="card-text">Description of the third feature. Explain what it does and why it is valuable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section id="form" class="container my-5">
+    <h2 class="mb-4 text-center">Example Form</h2>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <form>
+          <!-- Text Input -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+
+          <!-- Email Input -->
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+
+          <!-- Select Input -->
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Radio Buttons -->
+          <div class="form-group">
+            <label class="d-block">Marital Status</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="maritalStatus" id="single" value="single">
+              <label class="form-check-label" for="single">Single</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="maritalStatus" id="married" value="married">
+              <label class="form-check-label" for="married">Married</label>
+            </div>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="subscribe">
+            <label class="form-check-label" for="subscribe">Subscribe to newsletter</label>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+          </div>
+
+          <!-- File Input -->
+          <div class="form-group">
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" class="form-control-file" id="profilePicture">
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-custom btn-lg">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <p class="mb-0">© 2024 My Website. All rights reserved.</p>
+      <a href="mailto:info@mywebsite.com" class="text-white">info@mywebsite.com</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
